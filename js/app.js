@@ -253,7 +253,7 @@ const showProducts = (products) => {
         const image = product.image;
         const div = document.createElement("div");
         div.classList.add("col", "product");
-        div.innerHTML = `<div class=" shadow p-3 mb-5 rounded card py-2 p-1 m-1 h-100" style="background-color:#f5f5f5;">
+        div.innerHTML = `<div class=" shadow p-3 mb-5 rounded card py-2 m-1 h-100" style="background-color:#f5f5f5;">
       
     <img class="card-img-top" height="300px" width="100px" src=${image}></img>
       
@@ -262,7 +262,7 @@ const showProducts = (products) => {
       <p> <span class="fs-6">Category: ${product.category}</span></p>
       <p><span class="fs-6">Rating: ${product.rating.rate} (${product.rating.count})</span></p>
       
-      <h2>Price: ${product.price}</h2>
+      <h3>Price: ${product.price}</h3>
       </div>
       <div class="m-auto">
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-info">add to cart</button> 
@@ -331,10 +331,12 @@ const reset = () => {
     setInnerText("total-tax", 0);
     setInnerText("total", 0);
     document.getElementById("cart-total").innerText = 0;
-    document.getElementById("total-Products").innerText = 0;
+    document.getElementById("").innerText = 0;
 }
 
-
+const remov =()=>{
+    console.log('hi')
+}
 
 
 //grandTotal update function
